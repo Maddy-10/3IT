@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCart(props) {
+  const navigate= useNavigate()
   return (
-    <div className="card m-2 mt-5" style={{ width: 300 }} role="button">
+    <div className="card m-2 mt-5 cursor-pointer" style={{ width: 300 }} role="button" onClick={()=>navigate(`/cart/${props.id}`)}>
       <div className="imgs">
         <img
           src={props.product_image}
